@@ -31,6 +31,3 @@
 
 ### Pedido
 - **Atributos**: `ID_Pedido`, `Fecha_Pedido`, `Total`
-
-
-El siguiente diagrama muestra la representación visual del modelo entidad/relación (E/R). (Incluir el diagrama generado en Draw.io aquí).
