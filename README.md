@@ -1,10 +1,24 @@
-# ModeloER_Viveros
+# Modelo Entidad/Relación - Tajinaste S.A.
 
-## Entidades y Relaciones
+Este proyecto documenta el modelo entidad/relación para **Tajinaste S.A.**, una empresa dedicada a la venta de plantas, productos de jardinería y decoración a través de su red de viveros. El objetivo principal es llevar un control del stock, empleados, clientes y pedidos en los viveros.
 
-### Vivero
-- **Atributos**: `ID_Vivero`, `Nombre`, `Latitud`, `Longitud`
-- Relación **1:N** con **Zona**
+## Entidades
+
+### 1. Vivero
+- **Descripción**: Representa un vivero de la empresa.
+- **Atributos**:
+  - `ID_Vivero` (PK): Identificador único del vivero.
+  - `Nombre`: Nombre del vivero (e.g., "Vivero Norte").
+  - `Latitud`, `Longitud`: Coordenadas geográficas del vivero.
+
+**Ejemplo**:
+```json
+{
+  "ID_Vivero": 1,
+  "Nombre": "Vivero Norte",
+  "Latitud": 28.1234,
+  "Longitud": -15.4321
+}
 
 ### Zona
 - **Atributos**: `ID_Zona`, `Nombre`, `Latitud`, `Longitud`
