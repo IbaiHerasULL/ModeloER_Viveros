@@ -112,32 +112,39 @@
 
 ### 1. Vivero - Zona
 - *Descripción*: Un vivero puede tener múltiples zonas, pero cada zona pertenece a un único vivero.
-- *Cardinalidad: Relación 1:N* (Un vivero puede tener varias zonas).
+- *Cardinalidad*: Relación 1:N (Un vivero puede tener varias zonas).
 - *Ejemplo*: El Vivero Central (ID_Vivero: 001) tiene las zonas "Zona Exterior" y "Almacén", pero estas zonas solo pertenecen al Vivero Central.
 
 ### 2. Zona - Producto (Stock)
 - *Descripción*: Una zona puede contener varios productos y un producto puede estar disponible en varias zonas. Se controla la cantidad disponible de cada producto por zona.
-- *Cardinalidad: Relación N:M* (Un producto puede estar en varias zonas y una zona puede contener varios productos).
+- *Cardinalidad*: Relación N:M (Un producto puede estar en varias zonas y una zona puede contener varios productos).
 - *Atributos de la relación*:
     - `Stock`: Cada producto tiene una cantidad de stock concreta en cada zona.
 - *Ejemplo*: La "Palmera Canariense" (ID_Producto: P001) puede estar en la "Zona Exterior" del Vivero Central con 150 unidades y en el "Almacén" del Vivero Norte con 50 unidades.
 
-### 3. Vivero - Empleado (Historial_Puesto)
-- *Descripción*: Un empleado solo puede trabajar en un vivero a la vez, pero el historial de sus asignaciones se mantiene a lo largo del tiempo.
-- *Cardinalidad: Relación **1:N* (Un vivero puede tener varios empleados, pero un empleado solo trabaja en un vivero a la vez).
-- *Ejemplo*: Juan (ID_Empleado: E001) trabaja en el Vivero Central durante enero a marzo de 2023, pero solo en ese vivero.
+### 3. Zona - Empleado (Historial_Puesto)
+- *Descripción*: Un empleado solo puede trabajar en una zona a la vez, pero el historial de sus asignaciones se mantiene a lo largo del tiempo.
+- *Cardinalidad*: Relación N:M (Una zona puede tener varios empleados, y un empleado trabaja en varias zonas, aunque no a la vez).
+- *Atributos de la relación*:
+    - `Fecha de Inicio`: Fecha de inicio de trabajo en la zona en cuestión.
+    - `Fecha de Fin`: Fecha de fin de trabajo en la zona en cuestión.
+    - `Productividad`: Representa la productividad a lo largo del trabajo en la zona en cuestión. Dependerá del tiempo de trabajo y de la tarea.
+    - `Tarea`: La tarea que desempeña en la zona en cuestión.
+- *Ejemplo*: Juan (ID_Empleado: E001) trabaja en el Vivero Central en la zona alta durante enero a marzo de 2023, cultivando plantas trepadoras con una productividad de 50 puntos.
 
-### 4. Empleado - Zona (Historial_Puesto)
-- *Descripción*: Un empleado está asignado a una zona específica dentro de un vivero. La productividad del empleado en esa zona también se registra.
-- *Cardinalidad: Relación **1:N* (Un empleado trabaja en una zona a la vez, pero una zona puede tener varios empleados a lo largo del tiempo).
-- *Ejemplo*: Juan (ID_Empleado: E001) trabaja en la "Zona Exterior" del Vivero Central durante enero de 2023, pero la zona ha tenido otros empleados en diferentes periodos.
-
-### 5. Cliente - Pedido
+### 4. Cliente - Pedido
 - *Descripción*: Un cliente puede realizar varios pedidos, pero un pedido es realizado por un único cliente.
-- *Cardinalidad: Relación **1:N* (Un cliente puede tener múltiples pedidos).
+- *Cardinalidad*: Relación 1:N (Un cliente puede tener múltiples pedidos).
 - *Ejemplo*: Ana (ID_Cliente: C001) realizó dos pedidos en marzo y abril de 2023.
+
+### 5. Producto - Pedido
+- *Descripción*: Un pedido contiene varios productos, y un producto puede estar incluido en varios pedidos.
+- *Cardinalidad*: Relación N:M (Un pedido puede tener varios productos y viceversa).
+- *Atributos de la relación*:
+    - `Stock`: Cada producto puede ser vendido en varias cantidades
+- *Ejemplo*: La "Palmera Canariense" (ID_Producto: P001) fue vendida en varios pedidos en enero y febrero de 2024 en 10 unidades.
 
 ### 6. Empleado - Pedido
 - *Descripción*: Un empleado puede gestionar varios pedidos, pero cada pedido es gestionado por un único empleado.
-- *Cardinalidad: Relación **1:N* (Un empleado puede gestionar varios pedidos).
+- *Cardinalidad*: Relación 1:N (Un empleado puede gestionar varios pedidos).
 - *Ejemplo*: Juan (ID_Empleado: E001) gestionó los pedidos de marzo de varios clientes.
