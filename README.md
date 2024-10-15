@@ -43,20 +43,20 @@
 
 3. **Producto**
 
-    Descripción: Productos que se venden en los viveros.
-    Atributos:
-        ID_Producto (PK): Identificador único del producto.
-        Nombre: Nombre del producto (ej. "Maceta grande").
-        Stock: Cantidad disponible en stock.
-    Ejemplo:
+    **Descripción**: Productos que se venden en los viveros.
+    **Atributos**:
+    - `ID_Producto (PK)`: Identificador único del producto.
+    - `Nombre`: Nombre del producto (ej. "Maceta grande").
+    - `Stock`: Cantidad disponible en stock.
 
-    json
-
+    **Ejemplo**:
+    ```json
     {
       "ID_Producto": 2001,
       "Nombre": "Maceta grande",
       "Stock": 50
     }
+    ```
 
 4. Empleado
 
