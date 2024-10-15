@@ -1,6 +1,6 @@
 # Modelo Entidad/Relación Viveros
 
-![Diagrama del Modelo de Viveros](./viveros.png)
+![Diagrama del Modelo de Viveros](viveros.png)
 
 ## Entidades Definidas
 
