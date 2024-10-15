@@ -7,9 +7,9 @@
     **Descripción**: Representa cada uno de los viveros que posee la empresa.
 
     **Atributos**:
-       - `ID_Vivero (PK)`: Identificador único de cada vivero.
-       - `Nombre`: Nombre del vivero (ej. "Vivero Norte").
-       - `Latitud` y `Longitud`: Coordenadas geográficas para su georreferenciación.
+    - **ID_Vivero (PK)**: Identificador único de cada vivero.
+        - **Nombre**: Nombre del vivero (ej. "Vivero Norte").
+        - **Latitud** y **Longitud**: Coordenadas geográficas para su georreferenciación.
     
     **Ejemplo**:
     ```json
