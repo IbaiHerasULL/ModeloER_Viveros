@@ -2,7 +2,7 @@
 
 ## Entidades Definidas
 
-1. Vivero
+1. **Vivero**
 
     **Descripción**: Representa cada uno de los viveros que posee la empresa.
 
@@ -13,7 +13,6 @@
     
     **Ejemplo**:
     ```json
-
     {
       "ID_Vivero": 1,
       "Nombre": "Vivero Norte",
@@ -22,25 +21,27 @@
     }
     ```
 
-2. Zona
+2. **Zona**
 
-    Descripción: Representa las diferentes zonas dentro de un vivero, como almacén, zona exterior, etc.
-    Atributos:
-        ID_Zona (PK): Identificador único de la zona.
-        Nombre: Nombre de la zona (ej. "Exterior").
-        Latitud y Longitud: Coordenadas específicas de la zona dentro del vivero.
-    Ejemplo:
+    **Descripción**: Representa las diferentes zonas dentro de un vivero, como almacén, zona exterior, etc.
 
-    json
+    **Atributos**:
+        `ID_Zona (PK)`: Identificador único de la zona.
+        `Nombre`: Nombre de la zona (ej. "Exterior").
+        `Latitud` y `Longitud`: Coordenadas específicas de la zona dentro del vivero.
 
+    **Ejemplo**:
+
+    ```json
     {
       "ID_Zona": 101,
       "Nombre": "Almacén",
       "Latitud": 28.1236,
       "Longitud": -15.4325
     }
+    ```
 
-3. Producto
+3. **Producto**
 
     Descripción: Productos que se venden en los viveros.
     Atributos:
