@@ -1,7 +1,8 @@
 # Modelo Entidad/Relación Viveros
 
 ## Entidades Definidas
-### 1. Vivero
+
+### Vivero
 
     Descripción: Representa cada uno de los viveros que posee la empresa.
     Atributos:
