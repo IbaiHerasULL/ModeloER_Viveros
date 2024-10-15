@@ -26,9 +26,9 @@
     **Descripción**: Representa las diferentes zonas dentro de un vivero, como almacén, zona exterior, etc.
 
     **Atributos**:
-        `ID_Zona (PK)`: Identificador único de la zona.
-        `Nombre`: Nombre de la zona (ej. "Exterior").
-        `Latitud` y `Longitud`: Coordenadas específicas de la zona dentro del vivero.
+    - `ID_Zona (PK)`: Identificador único de la zona.
+    - `Nombre`: Nombre de la zona (ej. "Exterior").
+    - `Latitud` y `Longitud`: Coordenadas específicas de la zona dentro del vivero.
 
     **Ejemplo**:
 
