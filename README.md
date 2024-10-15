@@ -108,16 +108,18 @@
     }
     ```
 
-    ## Relaciones Definidas
+## Relaciones Definidas
 
 ### 1. Vivero - Zona
 - *Descripción*: Un vivero puede tener múltiples zonas, pero cada zona pertenece a un único vivero.
-- *Cardinalidad: Relación **1:N* (Un vivero puede tener varias zonas).
+- *Cardinalidad: Relación 1:N* (Un vivero puede tener varias zonas).
 - *Ejemplo*: El Vivero Central (ID_Vivero: 001) tiene las zonas "Zona Exterior" y "Almacén", pero estas zonas solo pertenecen al Vivero Central.
 
 ### 2. Zona - Producto (Stock)
 - *Descripción*: Una zona puede contener varios productos y un producto puede estar disponible en varias zonas. Se controla la cantidad disponible de cada producto por zona.
-- *Cardinalidad: Relación **N:M* (Un producto puede estar en varias zonas y una zona puede contener varios productos).
+- *Cardinalidad: Relación N:M* (Un producto puede estar en varias zonas y una zona puede contener varios productos).
+- *Atributos de la relación*:
+    - `Stock`: Cada producto tiene una cantidad de stock concreta en cada zona.
 - *Ejemplo*: La "Palmera Canariense" (ID_Producto: P001) puede estar en la "Zona Exterior" del Vivero Central con 150 unidades y en el "Almacén" del Vivero Norte con 50 unidades.
 
 ### 3. Vivero - Empleado (Historial_Puesto)
