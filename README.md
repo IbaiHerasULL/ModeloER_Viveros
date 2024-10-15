@@ -18,7 +18,7 @@ Este proyecto documenta el modelo entidad/relación para **Tajinaste S.A.**, una
   "Nombre": "Vivero Norte",
   "Latitud": 28.1234,
   "Longitud": -15.4321
-}
+}´´´
 
 ### Zona
 - **Atributos**: `ID_Zona`, `Nombre`, `Latitud`, `Longitud`
