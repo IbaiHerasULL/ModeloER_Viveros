@@ -2,7 +2,7 @@
 
 ## Entidades Definidas
 
-### 1. Vivero
+1. ### Vivero
 
     **Descripción**: Representa cada uno de los viveros que posee la empresa.
 
