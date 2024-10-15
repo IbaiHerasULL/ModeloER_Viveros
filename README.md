@@ -62,8 +62,8 @@
     **Descripción**: Representa a los empleados de Tajinaste S.A.
 
     **Atributos**:
-        `ID_Empleado (PK)`: Identificador único del empleado.
-        `Nombre`: Nombre del empleado (ej. "Juan Pérez").
+    - `ID_Empleado (PK)`: Identificador único del empleado.
+    - `Nombre`: Nombre del empleado (ej. "Juan Pérez").
     **Ejemplo**:
     ```json
     {
