@@ -87,25 +87,24 @@
     {
       "ID_Cliente": 5001,
       "Nombre": "Ana González",
-      "Tajinaste_Plus": "Sí"
+      "Tajinaste_Plus": "Sí",
+      "Volumen_de_compras_mensual": 30,
+      "Volumen_de_compras_desde_Tajinaste_Plus": 45
     }
     ```
 
 6. **Pedido**
 
-    Descripción: Representa los pedidos realizados por los clientes, y gestionados por los empleados.
-    Atributos:
-        ID_Pedido (PK): Identificador único del pedido.
-        Fecha_Pedido: Fecha en la que se realizó el pedido.
-        ID_Cliente (FK): Identificador del cliente que realizó el pedido.
-        ID_Empleado (FK): Identificador del empleado responsable de gestionar el pedido.
-    Ejemplo:
+    **Descripción**: Representa los pedidos realizados por los clientes, y gestionados por los empleados.
 
-    json
-
-{
+    **Atributos**:
+    - `ID_Pedido (PK)`: Identificador único del pedido.
+    - `Fecha_Pedido`: Fecha en la que se realizó el pedido.
+    **Ejemplo**:
+    ```json
+    {
   "ID_Pedido": 7001,
   "Fecha_Pedido": "2024-10-01",
   "ID_Cliente": 5001,
   "ID_Empleado": 301
-}
+    } ```
