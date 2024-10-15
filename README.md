@@ -8,8 +8,8 @@
 
     **Atributos**:
     - **ID_Vivero (PK)**: Identificador único de cada vivero.
-        - **Nombre**: Nombre del vivero (ej. "Vivero Norte").
-        - **Latitud** y **Longitud**: Coordenadas geográficas para su georreferenciación.
+    - **Nombre**: Nombre del vivero (ej. "Vivero Norte").
+    - **Latitud** y **Longitud**: Coordenadas geográficas para su georreferenciación.
     
     **Ejemplo**:
     ```json
