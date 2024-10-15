@@ -162,3 +162,191 @@
 3. *El stock de productos no puede ser negativo*: En la relación *Stock* entre *Producto* y *Zona*, la cantidad disponible (Cantidad_Disponible) debe ser mayor o igual a 0.
 
 4. *Cada pedido debe tener un empleado responsable*: Un pedido no puede existir sin que haya un *Empleado* asignado para gestionarlo.
+
+## Ejemplo Ilustrativo del Modelo Entidad/Relación Viveros
+
+Supongamos que Tajinaste S.A. tiene dos viveros: el Vivero Norte y el Vivero Central. Cada vivero tiene zonas específicas para almacenamiento y exposición de productos, empleados que trabajan en esas zonas, y clientes que compran productos a través de pedidos gestionados por dichos empleados.
+
+1. Viveros y Zonas
+
+- El Vivero Norte tiene dos zonas: Exterior y Almacén.
+- El Vivero Central tiene tres zonas: Zona Exterior, Invernadero y Almacén.
+
+Ejemplo de datos de viveros y zonas:
+
+```json
+{
+  "Viveros": [
+    {
+      "ID_Vivero": 1,
+      "Nombre": "Vivero Norte",
+      "Latitud": 28.1234,
+      "Longitud": -15.4321,
+      "Zonas": [
+        {
+          "ID_Zona": 101,
+          "Nombre": "Exterior",
+          "Latitud": 28.1236,
+          "Longitud": -15.4325
+        },
+        {
+          "ID_Zona": 102,
+          "Nombre": "Almacén",
+          "Latitud": 28.1237,
+          "Longitud": -15.4328
+        }
+      ]
+    },
+    {
+      "ID_Vivero": 2,
+      "Nombre": "Vivero Central",
+      "Latitud": 28.9876,
+      "Longitud": -15.8765,
+      "Zonas": [
+        {
+          "ID_Zona": 201,
+          "Nombre": "Zona Exterior",
+          "Latitud": 28.9879,
+          "Longitud": -15.8768
+        },
+        {
+          "ID_Zona": 202,
+          "Nombre": "Invernadero",
+          "Latitud": 28.9881,
+          "Longitud": -15.8770
+        },
+        {
+          "ID_Zona": 203,
+          "Nombre": "Almacén",
+          "Latitud": 28.9882,
+          "Longitud": -15.8771
+        }
+      ]
+    }
+  ]
+}
+```
+
+2. Productos
+
+Cada vivero tiene productos que pueden encontrarse en distintas zonas. Por ejemplo, la Maceta Grande y la Palmera Canariense están disponibles en diferentes zonas de ambos viveros.
+
+Ejemplo de datos de productos y stock por zona:
+
+```json
+{
+  "Productos": [
+    {
+      "ID_Producto": 2001,
+      "Nombre": "Maceta Grande",
+      "Zonas": [
+        {
+          "ID_Vivero": 1,
+          "ID_Zona": 101,
+          "Stock": 50
+        },
+        {
+          "ID_Vivero": 2,
+          "ID_Zona": 201,
+          "Stock": 75
+        }
+      ]
+    },
+    {
+      "ID_Producto": 2002,
+      "Nombre": "Palmera Canariense",
+      "Zonas": [
+        {
+          "ID_Vivero": 1,
+          "ID_Zona": 102,
+          "Stock": 20
+        },
+        {
+          "ID_Vivero": 2,
+          "ID_Zona": 202,
+          "Stock": 100
+        }
+      ]
+    }
+  ]
+}
+```
+
+3. Empleados y su Historial de Puesto
+
+Los empleados trabajan en distintas zonas de los viveros, y su historial de trabajo es registrado con la tarea y la productividad.
+
+Ejemplo de datos de empleados y asignaciones a zonas:
+
+```json
+{
+  "Empleados": [
+    {
+      "ID_Empleado": 301,
+      "Nombre": "Juan Pérez",
+      "Historial_Puesto": [
+        {
+          "ID_Vivero": 1,
+          "ID_Zona": 102,
+          "Fecha_Inicio": "2023-01-01",
+          "Fecha_Fin": "2023-06-30",
+          "Tarea": "Almacén - Gestión de inventario",
+          "Productividad": 80
+        },
+        {
+          "ID_Vivero": 2,
+          "ID_Zona": 203,
+          "Fecha_Inicio": "2023-07-01",
+          "Fecha_Fin": null,
+          "Tarea": "Almacén - Supervisión",
+          "Productividad": 95
+        }
+      ]
+    }
+  ]
+}
+```
+
+4. Clientes y Pedidos
+
+Los clientes realizan pedidos, los cuales son gestionados por los empleados. Además, algunos clientes son parte del programa Tajinaste Plus.
+
+Ejemplo de datos de clientes, pedidos y productos pedidos:
+
+```json
+{
+  "Clientes": [
+    {
+      "ID_Cliente": 5001,
+      "Nombre": "Ana González",
+      "Tajinaste_Plus": "Sí",
+      "Volumen_de_compras_mensual": 30,
+      "Volumen_de_compras_desde_Tajinaste_Plus": 100,
+      "Pedidos": [
+        {
+          "ID_Pedido": 7001,
+          "Fecha_Pedido": "2024-10-01",
+          "Empleado_Responsable": 301,
+          "Productos": [
+            {
+              "ID_Producto": 2001,
+              "Cantidad": 10
+            },
+            {
+              "ID_Producto": 2002,
+              "Cantidad": 5
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+
+### Relación entre Entidades
+
+- Un vivero puede tener muchas zonas (1), como es el caso del Vivero Norte con las zonas Exterior y Almacén.
+- Un producto puede estar disponible en varias zonas y viceversa (N), como la Palmera Canariense en el Almacén del Vivero Norte y el Invernadero del Vivero Central.
+- Un empleado puede trabajar en diferentes zonas a lo largo del tiempo, con registro de productividad y tarea específica.
+- Un cliente puede hacer varios pedidos, como Ana González, quien realizó un pedido el 1 de octubre de 2024.
