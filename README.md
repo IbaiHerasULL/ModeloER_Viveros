@@ -2,7 +2,7 @@
 
 ## Entidades Definidas
 
-1. ### Vivero
+1. Vivero
 
     **Descripción**: Representa cada uno de los viveros que posee la empresa.
 
@@ -22,7 +22,7 @@
     }
     ```
 
-### 2. Zona
+2. Zona
 
     Descripción: Representa las diferentes zonas dentro de un vivero, como almacén, zona exterior, etc.
     Atributos:
