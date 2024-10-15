@@ -151,4 +151,12 @@
 - *Cardinalidad*: Relación 1:N (Un empleado puede gestionar varios pedidos).
 - *Ejemplo*: Juan (ID_Empleado: E001) gestionó los pedidos de marzo de varios clientes.
 
-## Restr
+## Restricciones Semánticas Definidas
+
+1. *Un empleado no puede trabajar en más de una zona al mismo tiempo*: La relación entre *Empleado* y *Zona* a través de *Historial_Puesto* incluye esta restricción, lo que asegura que un empleado solo esté asignado a una zona en un periodo dado.
+   
+2. *Un cliente solo puede estar en Tajinaste Plus si supera las 10 compras mensuales*: Solo si un cliente lleva más de 10 compras registradas al mes puede ser accedido al programa de Tajinaste Plus.
+
+3. *El stock de productos no puede ser negativo*: En la relación *Stock* entre *Producto* y *Zona*, la cantidad disponible (Cantidad_Disponible) debe ser mayor o igual a 0.
+
+4. *Cada pedido debe tener un empleado responsable*: Un pedido no puede existir sin que haya un *Empleado* asignado para gestionarlo.
