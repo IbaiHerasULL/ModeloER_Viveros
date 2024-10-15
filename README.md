@@ -5,6 +5,7 @@
 1. Vivero
 
     **Descripción**: Representa cada uno de los viveros que posee la empresa.
+
     **Atributos**:
        - `ID_Vivero (PK)`: Identificador único de cada vivero.
        - `Nombre`: Nombre del vivero (ej. "Vivero Norte").
