@@ -103,8 +103,6 @@
     **Ejemplo**:
     ```json
     {
-  "ID_Pedido": 7001,
-  "Fecha_Pedido": "2024-10-01",
-  "ID_Cliente": 5001,
-  "ID_Empleado": 301
+      "ID_Pedido": 7001,
+      "Fecha_Pedido": "2024-10-01",
     } ```
