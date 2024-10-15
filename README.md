@@ -44,55 +44,54 @@
 3. **Producto**
 
     **Descripción**: Productos que se venden en los viveros.
+
     **Atributos**:
     - `ID_Producto (PK)`: Identificador único del producto.
     - `Nombre`: Nombre del producto (ej. "Maceta grande").
-    - `Stock`: Cantidad disponible en stock.
 
     **Ejemplo**:
     ```json
     {
       "ID_Producto": 2001,
-      "Nombre": "Maceta grande",
-      "Stock": 50
+      "Nombre": "Maceta grande"
     }
     ```
 
-4. Empleado
+4. **Empleado**
 
-    Descripción: Representa a los empleados de Tajinaste S.A.
-    Atributos:
-        ID_Empleado (PK): Identificador único del empleado.
-        Nombre: Nombre del empleado (ej. "Juan Pérez").
-        Fecha_Contratación: Fecha en la que fue contratado.
-    Ejemplo:
+    **Descripción**: Representa a los empleados de Tajinaste S.A.
 
-    json
-
+    **Atributos**:
+        `ID_Empleado (PK)`: Identificador único del empleado.
+        `Nombre`: Nombre del empleado (ej. "Juan Pérez").
+    **Ejemplo**:
+    ```json
     {
       "ID_Empleado": 301,
       "Nombre": "Juan Pérez",
-      "Fecha_Contratación": "2020-01-15"
     }
+    ```
 
-5. Cliente
+5. **Cliente**
 
-    Descripción: Representa a los clientes de la empresa que participan en el programa de fidelización Tajinaste Plus.
-    Atributos:
-        ID_Cliente (PK): Identificador único del cliente.
-        Nombre: Nombre del cliente.
-        Fecha_Ingreso: Fecha en la que ingresó al programa de fidelización.
-    Ejemplo:
+    **Descripción**: Representa a los clientes de la empresa
 
-    json
+    **Atributos**:
+    - `ID_Cliente (PK)`: Identificador único del cliente.
+    - `Nombre`: Nombre del cliente.
+    - `Tajinaste_Plus`: Si es beneficiario del programa Tajinaste Plus. Su valor es Sí o No.
+    - `Volumen_de_compras_mensual` y `Volumen_de_compras_desde_Tajinaste_Plus`: El primero se refiere al volumen de compras hechas ese mes y el segundo al volumen total de compras hechas desde la integración en el programa Tajinaste Plus. Los dos atributos son calculados, ya que pueden ser calculados a través de la relación con la entidad Pedido.
 
+    **Ejemplo**:
+    ```json
     {
       "ID_Cliente": 5001,
       "Nombre": "Ana González",
-      "Fecha_Ingreso": "2022-05-10"
+      "Tajinaste_Plus": "Sí"
     }
+    ```
 
-6. Pedido
+6. **Pedido**
 
     Descripción: Representa los pedidos realizados por los clientes, y gestionados por los empleados.
     Atributos:
