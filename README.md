@@ -10,15 +10,18 @@ Este proyecto documenta el modelo entidad/relación para **Tajinaste S.A.**, una
   - `ID_Vivero` (PK): Identificador único del vivero.
   - `Nombre`: Nombre del vivero (e.g., "Vivero Norte").
   - `Latitud`, `Longitud`: Coordenadas geográficas del vivero.
-
 **Ejemplo**:
-```json
+'''
 {
   "ID_Vivero": 1,
   "Nombre": "Vivero Norte",
   "Latitud": 28.1234,
   "Longitud": -15.4321
-}´´´
+}
+'''
+
+
+
 
 ### Zona
 - **Atributos**: `ID_Zona`, `Nombre`, `Latitud`, `Longitud`
