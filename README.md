@@ -21,19 +21,21 @@
     }
     ```
 
-2. **Zona**
+2. **Zona** (Entidad débil)
 
-    **Descripción**: Representa las diferentes zonas dentro de un vivero, como almacén, zona exterior, etc.
+    **Descripción**: Representa las diferentes zonas dentro de un vivero, como almacén, zona exterior, etc. La zona es dependiente del vivero, es decir, no puede existir sin estar asociada a un vivero.
 
     **Atributos**:
-    - `ID_Zona (PK)`: Identificador único de la zona.
+    - `ID_Vivero (FK, PK)`: Identificador único del vivero al que pertenece la zona (parte de la clave primaria).
+    - `ID_Zona (PK)`: Identificador de la zona dentro del vivero (parte de la clave primaria).
     - `Nombre`: Nombre de la zona (ej. "Exterior").
-    - `Latitud` y `Longitud`: Coordenadas específicas de la zona dentro del vivero.
+    - `Latitud` y `Longitud`: Coordenadas geográficas específicas de la zona dentro del vivero.
 
     **Ejemplo**:
 
     ```json
     {
+      "ID_Vivero": 1,
       "ID_Zona": 101,
       "Nombre": "Almacén",
       "Latitud": 28.1236,
@@ -148,3 +150,5 @@
 - *Descripción*: Un empleado puede gestionar varios pedidos, pero cada pedido es gestionado por un único empleado.
 - *Cardinalidad*: Relación 1:N (Un empleado puede gestionar varios pedidos).
 - *Ejemplo*: Juan (ID_Empleado: E001) gestionó los pedidos de marzo de varios clientes.
+
+## Restr
