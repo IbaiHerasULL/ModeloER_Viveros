@@ -1,16 +1,16 @@
-# Modelo Entidad/Relación Viveros #
+# Modelo Entidad/Relación Viveros
 
-Entidades Definidas
-1. Vivero
+## Entidades Definidas
+### 1. Vivero
 
     Descripción: Representa cada uno de los viveros que posee la empresa.
     Atributos:
-        ID_Vivero (PK): Identificador único de cada vivero.
-        Nombre: Nombre del vivero (ej. "Vivero Norte").
-        Latitud y Longitud: Coordenadas geográficas para su georreferenciación.
+        `ID_Vivero (PK)`: Identificador único de cada vivero.
+        `Nombre`: Nombre del vivero (ej. "Vivero Norte").
+        `Latitud` y `Longitud`: Coordenadas geográficas para su georreferenciación.
     Ejemplo:
 
-    json
+    ```json
 
     {
       "ID_Vivero": 1,
@@ -18,8 +18,9 @@ Entidades Definidas
       "Latitud": 28.1234,
       "Longitud": -15.4321
     }
+    ```
 
-2. Zona
+### 2. Zona
 
     Descripción: Representa las diferentes zonas dentro de un vivero, como almacén, zona exterior, etc.
     Atributos:
